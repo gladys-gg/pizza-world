@@ -1,0 +1,9 @@
+body{
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+.pizzaorder{
+    margin:0% 25%;
+}
