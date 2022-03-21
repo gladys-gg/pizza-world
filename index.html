@@ -12,65 +12,40 @@
 </head>
 <body>
 
-    <!--nav bar-->
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Pizza<span style="color: orange;">World</span></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#order">Make an order</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact Us</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-    </nav> 
-
 
       <!--order form and make an order part-->
     <div id="order"> 
-      <h3>Make your order here</h3>
-        <form action="">
+      
+        <form id="pizzaOrder">
+          <h2>Welcome to Pizza <span>world</span></h2>
+          <h3>Make your order here</h3>
         <div class="row g-3 pizzaorder">
           <div class="col-md-4">
             <select id="size" class="form-select">
               <option disabled selected>..The size...</option>
-              <option>Small</option>
-              <option>Medium</option>
-              <option>Large</option>
+              <option value="900">Small</option>
+              <option value="1200" >Medium</option>
+              <option value="1500"> Large</option>
             </select>
           </div>
           <div class="col-md-4">
-            <select id="size" class="form-select">
+            <select id="crust" class="form-select">
               <option disabled selected>..Type of crust...</option>
-              <option>Crispy</option>
-              <option>Stuffed</option>
-              <option>Gluten-free</option>
-              <option>Flat Bread Crust</option>
-              <option>Thin Crust</option>
-              <option>Cheese Crust </option>
-              <option>Thick Crust </option>
+              <option value="200">Crispy</option>
+              <option value="250">Stuffed</option>
+              <option value="300">Gluten-free</option>
+              <option value="150">Flat Bread Crust</option>
+              <option value="100">Thin Crust</option>
             </select>
           </div>
         <div class="col-md-4">
-          <select id="size" class="form-select">
+          <select id="topping" class="form-select">
             <option disabled selected>..Type of topping...</option>
-            <option>Chicken Hawaiian</option>
-            <option>Meat Deluxe</option>
-            <option>Roast Veg & Feta</option>
-            <option>Spicy Boerewors</option>
-            <option>Chicken & Beef Pepperoni</option>
-            <option>Cheese Burger </option>
-            <option>Tomato And Basil </option>
+            <option value="150">Hawaiian</option>
+            <option value="100">Meat-Deluxe</option>
+            <option value="200">Bacon</option>
+            <option value="50">Cheese</option>
+            <option value="80">Tomato</option>
           </select>
           </div>
         </div>
@@ -82,50 +57,29 @@
         </div>
         
         <br><br>
-        <button type="button in-line">Delivery</button>
-        <button type="submit in-line">Order Now</button>
+        <div class="form-group">
+          <label for="mode"><span></span>Mode of delivery</label>
+          <select name="mode" id="mode">
+          <option> Delivery </option>
+          <option>Pay and pick</option>
+        </select>
+        </div>
+        <button type="submit  btn btn-primary btn-block btn-lg" id="myBtn" value="Submit" name="submit">
+                  Place  Your Order
+                </button>
         
       </form>
+
+      <br><br><br>
+      <div>
+          <!--result div section-->
+          <h3 class="result"> Your total order is:</h3>
+          <p class="result"></p>
+         
+      </div>
         
     </div>
   
-
-    <!--contact section-->
-    <section id="contact">
-      <div class="container mt-3 contactContent">
-        <h1 class="text-center">Contact Us</h1>
-  
-          <div class="row mt-4">
-            <div class="col-lg-6">
-            <!-- to edit google map goto https://www.embed-map.com type your location, generate html code and copy the html -->
-              <div style="overflow:hidden;max-width:100%;width:500px;height:500px;">
-              <div id="embedmap-display" style="height:100%; width:100%;max-width:100%;">
-              <iframe style="height:100%;width:100%;border:0;" frameborder="0" 
-              src="https://www.google.com/maps/embed/v1/place?q=Thika+town&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
-              </iframe></div><a class="codefor-google-map" rel="nofollow" href="https://www.embed-map.com" 
-            id="enablemaps-data">https://www.embed-map.com</a>
-              <style>#embedmap-display img{max-height:none;max-width:none!important;background:none!important;}
-              </style>
-              </div>
-           </div>
-  
-            <div class="col-lg-6">
-            <!-- form fields -->
-              <form>
-              
-              <input type="text" class="form-control form-control-lg" placeholder="Name" required>
-              <input type="email" class="form-control mt-3" placeholder="Email" required>
-              <input type="text" class="form-control mt-3" placeholder="Subject">
-                <div class="mb-3 mt-3">
-                  <textarea class="form-control" rows="5" id="comment" name="text" placeholder="Your Message" required></textarea>
-                </div>
-              </form>
-              <button type="button" class="btn btn-primary mt-3">Contact Us</button>
-            </div>
-  
-          </div>
-      </div>
-    </section>
 
 </body>
 </html>

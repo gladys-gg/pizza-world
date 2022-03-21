@@ -2,8 +2,23 @@ body{
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
+    background-image: url(../images/img1.jpg);
 }
 
 .pizzaorder{
-    margin:0% 25%;
+    margin:0% 15%;
+}
+form{
+    background-color: teal;
+    opacity: 0.7;
+    color: white;
+    margin: 5% 20%;
+}
+
+#myBtn{
+    background-color: rgb(5, 153, 211);
+    color: black;
+    padding: 10px;
+    margin: 10%;
+    
 }
